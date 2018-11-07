@@ -11,6 +11,10 @@ use App\Markdown\WriterInterface;
  */
 class Markdown implements MarkdownInterface
 {
+    public function __construct(WriterInterface $writer)
+    {
+    }
+
     public function convertToHtml(String $string)
     {
         return '<p>' . $string . '</p>';

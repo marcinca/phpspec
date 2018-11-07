@@ -12,6 +12,11 @@ use PhpSpec\ObjectBehavior;
  */
 class MarkdownSpec extends ObjectBehavior
 {
+    function let(WriterInterface $writer)
+    {
+        $this->beConstructedWith($writer);
+    }
+
     function it_is_initializable()
     {
         $this->shouldHaveType(Markdown::class);
