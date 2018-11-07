@@ -18,7 +18,7 @@ class Markdown implements MarkdownInterface
 
     public function toHtmlFromReader(ReaderInterface $reader)
     {
-        return $reader->getMarkdown();
+        return $this->convertToHtml($reader->getMarkdown());
     }
 
     public function outputHtml($string, WriterInterface $writer)
